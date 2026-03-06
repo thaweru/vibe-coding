@@ -9,9 +9,17 @@ mark3 = float(input("Enter marks for subject 3: "))
 # Calculate the average
 average = (mark1 + mark2 + mark3) / 3
 
-# Determine result and display output
-result = "Pass" if average >= 40 else "Fail"
+# Determine Grade based on average
+if average >= 75:
+    grade = "Grade A"
+elif average >= 60:
+    grade = "Grade B"
+elif average >= 40:
+    grade = "Grade C"
+else:
+    grade = "Fail"
 
+# Display output
 print(f"\nStudent: {name}")
 print(f"Average Mark: {average:.2f}")
-print(f"Result: {result}")
+print(f"Result: {grade}")
